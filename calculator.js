@@ -6,6 +6,59 @@
  * @return {object} `calculator` object that can be used
  */
 
+var calculatorModule = (function(){
+  let memory = 0;
+  let total = 0;
+
+  var calculator = {
+    
+    load: function(x) {
+      if (!isNaN(x)){  
+        total = x;
+        return total;
+      }else if (isNaN(x)) {
+        throw Error("Error");
+      }
+      },
+       getTotal: function(){
+      return total;
+      },
+     add: function(x){
+       total+=x;
+       return total;
+      
+      }, 
+     subtract: function(x){
+       total-=x;
+       return total;
+     },
+     multiply: function(x){
+       total *=x;
+       return total;
+     },
+     divide: function(x){
+       total/=x;
+       return total;
+     },
+     recallMemory: function(x){
+       return memory;
+     },
+     saveMemory: function(x){
+       memory = total;
+       return memory;
+     },
+     clearMemory: function(x){
+        memory = 0;
+        return memory;
+     },
+     }
+ return calculator;
+});
+
+ 
+ 
+
+
 
   /**
    * sets the `total` to the number passed in

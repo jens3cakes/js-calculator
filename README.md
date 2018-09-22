@@ -4,7 +4,8 @@ We will be creating calculators by utilizing the **Revealing Module Pattern**. S
 
 The `CalculatorModule` will return an object when invoked. This object will have functions attached to it that perform different operations. Users will not be able to access these functions without first creating a new Calculator.
 
-This calculator will also have private variables: `total` and `memory`. Users will not be able to access these values directly. Only the functions will be able to interact with those values, functions like: `.add()`, `.subtract()`, `.multiply()`, `.divide()`, etc.
+This calculator will also have private variables: `total` and `memory`. Users will not be able to access these values directly. Only the functions will be able to interact with those values, functions like: `.add()`, 
+`.subtract()`, `.multiply()`, `.divide()`, etc.
 
 **NOTE**: Make sure you **_VALIDATE_** all of your inputs!!
 
