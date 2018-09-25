@@ -13,10 +13,10 @@ var calculatorModule = (function(){
   var calculator = {
     
     load: function(x) {
-      if (!isNaN(x)){  
+      if (typeof x === "number"){  
         total = x;
         return total;
-      }else if (isNaN(x)) {
+      }else {
         throw Error("Error");
       }
       },
@@ -24,21 +24,36 @@ var calculatorModule = (function(){
       return total;
       },
      add: function(x){
-       total+=x;
-       return total;
-      
+      if (typeof x === 'number'){
+        total+=x;
+        return total;
+      }else{
+        throw Error ('Error');
+      }
       }, 
      subtract: function(x){
-       total-=x;
+      if(typeof x === 'number'){ 
+      total-=x;
        return total;
+      }else{
+        throw Error('Error');
+      }
      },
      multiply: function(x){
-       total *=x;
-       return total;
+      if(typeof x === 'number'){
+         total *=x;
+         return total;
+      }else{
+        throw Error('Error');
+      }
      },
      divide: function(x){
-       total/=x;
-       return total;
+       if (typeof x === 'number'){
+           total/=x;
+          return total;
+       }else{
+         throw Error("Error");
+       }
      },
      recallMemory: function(x){
        return memory;
